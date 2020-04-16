@@ -23,6 +23,9 @@ public class FirstTask {
             case 4:
                 firstTask.countCircle(scanner);
                 break;
+            case 5:
+                System.exit(0);
+                break;
             default:
                 System.out.println("tokio veikmso nera");
         }
