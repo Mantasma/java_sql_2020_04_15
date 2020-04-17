@@ -12,7 +12,7 @@ public class FirstTask {
         while (selection != 5) {
             System.out.println("1. Staciojo trikampo plotas\n2. Staciakampio plotas\n3. Kvadrato plotas\n4. Apskritimo plotas\n5. Baigti");
 
-            selection = (int) firstTask.getCorrectNumber(scanner);
+            selection = (int) NumberUtils.getCorrectNumber(scanner); // ima is kitos class, kito uzdavinio
 
             switch (selection) {
                 case 1:
@@ -38,9 +38,9 @@ public class FirstTask {
 
     private void countTriangle(Scanner scanner) {
         System.out.println("iveskite pirma statini");
-        double a = getCorrectNumber(scanner);
+        double a = NumberUtils.getCorrectNumber(scanner);
         System.out.println("iveskite antra statini");
-        double b = getCorrectNumber(scanner);
+        double b = NumberUtils.getCorrectNumber(scanner);
 
         System.out.println("trikampo plotas yra " + a * b / 2);
 
@@ -48,16 +48,16 @@ public class FirstTask {
 
     private void countRectangle(Scanner scanner) {
         System.out.println("iveskite pirma staciakampio ilgi");
-        double a = getCorrectNumber(scanner);
+        double a = NumberUtils.getCorrectNumber(scanner);
         System.out.println("iveskite antra staciakampo ploti");
-        double b = getCorrectNumber(scanner);
+        double b = NumberUtils.getCorrectNumber(scanner);
 
         System.out.println("staciakampio plotas yra " + a * b);
     }
 
     private void countSquare(Scanner scanner) {
         System.out.println("iveskite kvadrato ilgi");
-        double a = getCorrectNumber(scanner);
+        double a = NumberUtils.getCorrectNumber(scanner);
         double z = Math.pow(a, 2);
 
         System.out.println("kvadrato plotas yra " + z);
@@ -65,7 +65,7 @@ public class FirstTask {
 
     private void countCircle(Scanner scanner) {
         System.out.println("iveskite spindulio ilgi");
-        double a = getCorrectNumber(scanner);
+        double a = NumberUtils.getCorrectNumber(scanner);
         DecimalFormat df = new DecimalFormat("0.00");
         double z = Math.pow(a, 2);
         double pi = 3.1415;
@@ -73,16 +73,5 @@ public class FirstTask {
         System.out.println("apskritimo plotas yra " + z * pi);
     }
 
-    private double getCorrectNumber(Scanner scanner) {
-        while (true)
-        {
-            try {
-                double number = scanner.nextDouble();
-                return number;
-            } catch (InputMismatchException ex) {
-                System.out.print("Ivedete bloga skaiciu pakartokite");
-                scanner.nextLine();
-            }
-        }
-    }
+
 }
