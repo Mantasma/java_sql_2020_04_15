@@ -70,7 +70,7 @@ public class FirstTask {
         double z = Math.pow(a, 2);
         double pi = 3.1415;
 
-        System.out.println("apskritimo plotas yra " + z * pi);
+        System.out.println("apskritimo plotas yra " + df.format( z * pi)); // butinai df.format
     }
 
 
