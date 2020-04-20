@@ -19,9 +19,14 @@ public class NumberUtils {
         try {
             return Integer.parseInt(number);
         }catch (NumberFormatException e){
-            System.out.println("ivedete bloga skaiciu teks pakartoti");
+            System.out.println("ivedete bloga skaiciu gale teks pakartoti");
             return getCorrectNumber(scanner);
         }
     }
 }
+
+
+
+
+
 

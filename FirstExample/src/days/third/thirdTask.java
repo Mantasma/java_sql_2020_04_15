@@ -28,7 +28,6 @@ public class thirdTask {
 
         callRequiredAction(items[1],firstNumber,secondNumber, scanner);
 
-
     }
     private static void callRequiredAction(String action, int firstNumber, int secondNumber, Scanner scanner){
         Calculator calculator = new Calculator(firstNumber, secondNumber);
