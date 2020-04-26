@@ -13,7 +13,7 @@ public class SecondTask {
 
         int elementLenght = scanner.nextInt();
 
-        int[] mas = new int[elementLenght];
+        int[] mas = new int[elementLenght]; //masyvas
 
         for(int i=0; i < mas.length; i++) {
             System.out.println(String.format("Iveskite %d elementa", i));
