@@ -31,7 +31,7 @@ public class DepartmentUsersService {
                             resultSet.getString("surname"),
                             resultSet.getString("rank"),
                             resultSet.getString("email"),
-                            resultSet.getString("phone")));
+                            resultSet.getInt("phone")));
 
                 }
             } catch (SQLException e) {
@@ -57,7 +57,7 @@ public class DepartmentUsersService {
             preparedStatement.setString(3, department.getSurname());
             preparedStatement.setString(4, department.getRank());
             preparedStatement.setString(5, department.getEmail());
-            preparedStatement.setString(6, department.getPhone());
+            preparedStatement.setInt(6, department.getPhone());
 
 
             preparedStatement.execute();

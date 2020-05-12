@@ -7,9 +7,12 @@ public class DepartmentUsers {
     private String surname;
     private String rank;
     private String email;
-    private String phone;
+    private int phone;
 
-    public DepartmentUsers(int id, String department_name, String name, String surname, String rank, String email, String phone) {
+    public DepartmentUsers() {
+    }
+
+    public DepartmentUsers(int id, String department_name, String name, String surname, String rank, String email, int phone) {
         this.id = id;
         this.department_name = department_name;
         this.name = name;
@@ -17,8 +20,8 @@ public class DepartmentUsers {
         this.rank = rank;
         this.email = email;
         this.phone = phone;
+
     }
-    public DepartmentUsers(){}
 
     public int getId() {
         return id;
@@ -68,11 +71,15 @@ public class DepartmentUsers {
         this.email = email;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 }
+
+
+
+
