@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://192.168.99.100:8008")
 @RequestMapping("/departmentsusers/addresses")
 public class DepartmentAddressControler {
     @Autowired

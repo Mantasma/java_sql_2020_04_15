@@ -25,7 +25,7 @@ public class DepartmentAddressesService {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     Address.add(new DepartmentAddress(resultSet.getInt("id"),
-                            resultSet.getInt("departmentsusers_id"),
+                            resultSet.getString("departmentsusers_id"),
                             resultSet.getString("country"),
                             resultSet.getString("city"),
                             resultSet.getString("street")));
@@ -48,7 +48,7 @@ public class DepartmentAddressesService {
             return null;
         }
         try {
-            preparedStatement.setInt(1, departmentAddress.getDepartmentsusers_id());
+            preparedStatement.setString(1, departmentAddress.getDepartmentsusers_id());
             preparedStatement.setString(2, departmentAddress.getCountry());
             preparedStatement.setString(3, departmentAddress.getCity());
             preparedStatement.setString(4, departmentAddress.getStreet());

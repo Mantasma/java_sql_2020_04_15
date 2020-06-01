@@ -2,7 +2,7 @@ package com.metinisporeikis.department.app.dto;
 
 public class DepartmentAddress {
     private int id;
-    private int departmentsusers_id;
+    private String departmentsusers_id;
     private String country;
     private String city;
     private String street;
@@ -10,13 +10,12 @@ public class DepartmentAddress {
     DepartmentAddress() {
     }
 
-    public DepartmentAddress(int id, int departmentsusers_id, String country, String city, String street) {
+    public DepartmentAddress(int id, String departmentsusers_id, String country, String city, String street) {
         this.id = id;
         this.departmentsusers_id = departmentsusers_id;
         this.country = country;
         this.city = city;
         this.street = street;
-
     }
 
     public int getId() {
@@ -27,11 +26,11 @@ public class DepartmentAddress {
         this.id = id;
     }
 
-    public int getDepartmentsusers_id() {
+    public String getDepartmentsusers_id() {
         return departmentsusers_id;
     }
 
-    public void setDepartmentsusers_id(int departmentsusers_id) {
+    public void setDepartmentsusers_id(String departmentsusers_id) {
         this.departmentsusers_id = departmentsusers_id;
     }
 
